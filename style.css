@@ -1,0 +1,156 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Layout basics */
+body {
+  font-family: Poppins, sans-serif;
+  line-height: 1.6;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header & nav */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #000000;
+}
+
+/* Gallery grid */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #ffffff;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 576px) {
+  body {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr; /* single column on phones */
+  }
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* space between messages */
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+.message {
+  padding: 10px 15px;
+  border-radius: 12px;
+  max-width: 70%; /* keeps messages readable */
+}
+
+.message.left {
+  align-self: flex-start;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.message.right {
+  align-self: flex-end;
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Contacts grid */
+.contacts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Individual card */
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* subtle lift on hover */
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  margin: 10px 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.card p {
+  font-size: 14px;
+  color: #555;
+}
+
+.card .btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: #000000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.card .btn:hover {
+  background: #000000;
+}
